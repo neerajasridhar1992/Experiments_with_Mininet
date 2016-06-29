@@ -1,0 +1,12 @@
+The set  of commands to implement a simple HTTP server on one of the hosts of a simple network and thus analyzed  sing Wireshark
+sudo mn -topo=single,4
+
+At the mininet prompt, the following commands are entered:
+
+mininet>dump
+#This dumps all the host's IP addresses and PIDs
+
+mininet>pingall
+#This gives out the results upon pinging all the hosts from all the hosts
+mininet>h4 python -m httpserver 80 &
+mininet>h1 wget 10.0.0.4
